@@ -1,6 +1,6 @@
 Usage
 =====
 
-.. click:: templatepackage.__main__:main
-   :prog: python-templatepackage
+.. click:: ucsfndt.__main__:main
+   :prog: python-ucsfndt
    :nested: full

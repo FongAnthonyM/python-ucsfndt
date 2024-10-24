@@ -6,8 +6,8 @@ Reference
     :backlinks: none
 
 
-templatepackage.__main__
+ucsfndt.__main__
 --------------------
 
-.. automodule:: templatepackage.__main__
+.. automodule:: ucsfndt.__main__
    :members:
