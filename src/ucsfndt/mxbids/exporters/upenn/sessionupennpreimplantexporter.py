@@ -16,7 +16,7 @@ __email__ = __email__
 from typing import Any
 
 # Third-Party Packages #
-from mxbids import Anatomy
+from mxbids import Session, Anatomy
 from mxbids.exporters import SessionBIDSExporter
 
 # Local Packages #
@@ -33,3 +33,7 @@ class SessionUPENNPreImplantExporter(SessionBIDSExporter):
     type_map: dict[type, (type, dict[str, Any])] = {
         Anatomy: (AnatomyUPENNExporter, {}),
     }
+
+
+# Assign Exporter
+Session.exporters["UPENNPreImplant"] = (SessionUPENNPreImplantExporter, {})

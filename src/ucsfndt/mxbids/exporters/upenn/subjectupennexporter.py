@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Any
 
 # Third-Party Packages #
+from mxbids import Subject
 from mxbids.exporters import SubjectBIDSExporter
 from xltektools.xltekmxbids import XLTEKMXBIDSSession
 
@@ -59,3 +60,7 @@ class SubjectUPENNExporter(SubjectBIDSExporter):
         implant.execute_export(path, name="implant01")
         preimplant = session.require_exporter("UPENNPreImplant", SessionUPENNPreImplantExporter)
         preimplant.execute_export(path, name="preimplant01")
+
+
+# Assign Exporter
+Subject.exporters["UPENN"] = (SubjectUPENNExporter, {})

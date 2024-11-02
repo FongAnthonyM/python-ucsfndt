@@ -15,6 +15,7 @@ __email__ = __email__
 # Standard Libraries #
 
 # Third-Party Packages #
+from mxbids import Dataset
 from mxbids.exporters import DatasetExporter
 
 # Local Packages #
@@ -29,3 +30,7 @@ class DatasetUPENNExporter(DatasetExporter):
     # Attributes #
     exporter_name: str = "UPENN"
     default_type: type = (SubjectUPENNExporter, {})
+
+
+# Assign Exporter
+Dataset.exporters["UPENN"] = (DatasetUPENNExporter, {})

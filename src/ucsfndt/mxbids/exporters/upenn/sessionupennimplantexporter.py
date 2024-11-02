@@ -16,7 +16,7 @@ __email__ = __email__
 from typing import Any
 
 # Third-Party Packages #
-from mxbids import CT
+from mxbids import Session, CT
 from mxbids.exporters import SessionBIDSExporter
 from xltektools.xltekmxbids import IEEGXLTEK
 
@@ -36,3 +36,7 @@ class SessionUPENNImplantExporter(SessionBIDSExporter):
         IEEGXLTEK: (IEEGUPENNExporter, {}),
         CT: (CTUPENNExporter, {}),
     }
+
+
+# Assign Exporter
+Session.exporters["UPENNImplant"] = (SessionUPENNImplantExporter, {})
