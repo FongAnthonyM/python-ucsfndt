@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ucsfndt"
-version = "0.2.0"
+version = "0.1.0"
 description = "Universitory of California San Francisco Neural Data Tools"
 authors = ["Anthony Fong <FongAnthonyM@gmail.com>"]
 license = "MIT"
