@@ -32,6 +32,7 @@ class SessionUPENNImplantExporter(SessionBIDSExporter):
 
     # Attributes #
     exporter_name: str = "UPENN"
+    name_map = {"ieeg": "ieeg", "ct": "ct"}
     type_map: dict[type, (type, dict[str, Any])] = {
         IEEGXLTEK: (IEEGUPENNExporter, {}),
         CT: (CTUPENNExporter, {}),

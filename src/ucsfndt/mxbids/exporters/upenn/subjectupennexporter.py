@@ -50,16 +50,11 @@ class SubjectUPENNExporter(SubjectBIDSExporter):
             type_map: A mapping of session types to exporter types.
             **kwargs: Additional keyword arguments.
         """
-        non_cdfs_session = self.bids_object.sessions["clinicalintracranial"]
-        session = XLTEKMXBIDSSession(
-            path=non_cdfs_session.path,
-            name=non_cdfs_session.name,
-            mode="r",
-        )
-        implant = session.require_exporter("UPENNImplant", SessionUPENNImplantExporter)
-        implant.execute_export(path, name="implant01")
+        session = self.bids_object.sessions["clinicalintracranial"]
         preimplant = session.require_exporter("UPENNPreImplant", SessionUPENNPreImplantExporter)
-        preimplant.execute_export(path, name="preimplant01")
+        preimplant.execute_export(path, name="ses-preimplant01")
+        implant = session.require_exporter("UPENNImplant", SessionUPENNImplantExporter)
+        implant.execute_export(path, name="ses-implant01")
 
 
 # Assign Exporter

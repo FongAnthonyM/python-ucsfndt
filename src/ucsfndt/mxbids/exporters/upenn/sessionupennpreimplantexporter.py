@@ -30,6 +30,7 @@ class SessionUPENNPreImplantExporter(SessionBIDSExporter):
 
     # Attributes #
     exporter_name: str = "UPENN"
+    name_map: dict[str, str] = {"anat": "anat"}
     type_map: dict[type, (type, dict[str, Any])] = {
         Anatomy: (AnatomyUPENNExporter, {}),
     }
