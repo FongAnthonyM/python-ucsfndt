@@ -23,7 +23,7 @@ python = ">=3.11,<4.0"
 click = ">=8.0.3"
 hdf5objects = ">=0.5.0"
 cdfs = ">=0.3.0"
-mxbids = ">=0.2.1"
+mxbids = ">=0.3.0"
 xltektools = {git = "https://github.com/FongAnthonyM/python-xltektools.git"}
 
 [tool.poetry.dev-dependencies]
